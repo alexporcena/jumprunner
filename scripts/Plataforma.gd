@@ -2,9 +2,6 @@ extends Node2D
 
 const VELOCIDADE_PLATAFORMA = -100
 
-func _ready():
-	criar_plataforma(5)
-
 func criar_plataforma(celulas):
 	$TileMap.set_cell(0, 0, 0)
 
