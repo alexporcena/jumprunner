@@ -27,7 +27,7 @@ func sort_plataforma(celulas):
 	instancia_plataforma.position = posicao_anterior
 	instancia_plataforma.criar_plataforma(celulas)
 	add_child(instancia_plataforma)
-
+	instancia_plataforma.criar_moedas(celulas)
 
 func _on_Timer_timeout():
 	
