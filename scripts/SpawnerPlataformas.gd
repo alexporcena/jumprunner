@@ -15,7 +15,6 @@ func sort_plataforma(celulas):
 
 	if plataforma_inicial:
 		posicao_anterior = Vector2(0, 120)
-		plataforma_inicial = false
 	else:
 		top_down = randi() % 2 #Valor = 0 (acima) ou = 1 (abaixo)
 		
@@ -27,7 +26,17 @@ func sort_plataforma(celulas):
 	instancia_plataforma.position = posicao_anterior
 	instancia_plataforma.criar_plataforma(celulas)
 	add_child(instancia_plataforma)
-	instancia_plataforma.criar_moedas(celulas)
+
+	
+	var sorteia_queda = randi() % 10
+	
+	if sorteia_queda > 7 and not plataforma_inicial:
+		instancia_plataforma.derruba_plataforma()
+	
+	if plataforma_inicial:
+		plataforma_inicial = false
+	else:
+		instancia_plataforma.criar_moedas(celulas)
 
 func _on_Timer_timeout():
 	
