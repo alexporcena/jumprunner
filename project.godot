@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="EndlessRunner"
-run/main_scene="res://cenas/Jogo.tscn"
+run/main_scene="res://cenas/UIMenu.tscn"
 config/icon="res://icon.png"
 
 [display]
