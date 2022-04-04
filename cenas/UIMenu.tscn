@@ -79,6 +79,7 @@ __meta__ = {
 position = Vector2( 118, 35 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="LabelNomeJogo" type="Label" parent="."]

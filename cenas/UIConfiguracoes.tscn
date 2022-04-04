@@ -1,8 +1,172 @@
-[gd_scene format=2]
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/fonte/Pixelmania.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://cenas/PlanodeFundo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/imagens/off.png" type="Texture" id=3]
+[ext_resource path="res://assets/imagens/on.png" type="Texture" id=4]
+[ext_resource path="res://assets/imagens/btn_blue.png" type="Texture" id=5]
+[ext_resource path="res://scripts/UIConfiguracoes.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+outline_size = 3
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 6
+outline_size = 2
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+size = 6
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 64, 32 )
+margin_left = 5.0
+margin_right = 5.0
+margin_top = 5.0
+margin_bottom = 5.0
 
 [node name="UIConfiguracoes" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="PlanodeFundo" parent="." instance=ExtResource( 2 )]
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -86.5
+margin_top = 4.0
+margin_right = 86.5
+margin_bottom = 27.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "CONFIGURAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckButtonMusica" type="CheckButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -108.0
+margin_top = -29.0
+margin_right = 108.0
+margin_bottom = -17.0
+custom_colors/font_color_disabled = Color( 1, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 1, 0, 0, 1 )
+custom_colors/font_color_hover_pressed = Color( 1, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_icons/off = ExtResource( 3 )
+custom_icons/on_disabled = ExtResource( 4 )
+custom_icons/on = ExtResource( 4 )
+custom_icons/off_disabled = ExtResource( 3 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/hover_pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+pressed = true
+text = "MUSICA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckButtonSons" type="CheckButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -108.0
+margin_top = -9.0
+margin_right = 108.0
+margin_bottom = 3.0
+custom_colors/font_color_disabled = Color( 1, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 1, 0, 0, 1 )
+custom_colors/font_color_hover_pressed = Color( 1, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_icons/off = ExtResource( 3 )
+custom_icons/on_disabled = ExtResource( 4 )
+custom_icons/on = ExtResource( 4 )
+custom_icons/off_disabled = ExtResource( 3 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/hover_pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+pressed = true
+text = "SONS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckButtonTelaCheia" type="CheckButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -108.0
+margin_top = 12.0
+margin_right = 108.0
+margin_bottom = 24.0
+custom_colors/font_color_disabled = Color( 1, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 1, 0, 0, 1 )
+custom_colors/font_color_hover_pressed = Color( 1, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_icons/off = ExtResource( 3 )
+custom_icons/on_disabled = ExtResource( 4 )
+custom_icons/on = ExtResource( 4 )
+custom_icons/off_disabled = ExtResource( 3 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/hover_pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+text = "TELA CHEIA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonMenu" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -23.5
+margin_top = -27.0
+margin_right = 23.5
+margin_bottom = -5.0
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "MENU"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="toggled" from="CheckButtonMusica" to="." method="_on_CheckButtonMusica_toggled"]
+[connection signal="toggled" from="CheckButtonSons" to="." method="_on_CheckButtonSons_toggled"]
+[connection signal="toggled" from="CheckButtonTelaCheia" to="." method="_on_CheckButtonTelaCheia_toggled"]
+[connection signal="pressed" from="ButtonMenu" to="." method="_on_ButtonMenu_pressed"]
