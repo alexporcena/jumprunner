@@ -25,3 +25,21 @@ func _physics_process(delta):
 func pontuacao():
 	pontos += 1
 	get_parent().find_node("HUD").altera_pontuacao(pontos)
+	
+func game_over():
+	var recorde = GameData.pega_valor("recorde")
+	
+	GameData.altera_valor("ultima_pontuacao", pontos)
+	
+	if pontos > recorde:
+		GameData.altera_valor("recorde", pontos)
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

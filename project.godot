@@ -24,6 +24,10 @@ config/name="EndlessRunner"
 run/main_scene="res://cenas/UIMenu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameData="*res://scripts/GameData.gd"
+
 [display]
 
 window/size/width=240
