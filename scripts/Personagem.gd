@@ -14,6 +14,8 @@ func _physics_process(delta):
 		$AnimationPlayer.play("correndo")
 		if Input.is_action_just_pressed("pular"):
 			velocidade.y = PULO
+			if GameData.pega_valor("sons") == 1:
+				$AudioPulo.play()
 	else:
 		if velocidade.y > 0:
 			$AnimationPlayer.play("caindo")
@@ -23,6 +25,8 @@ func _physics_process(delta):
 	velocidade = move_and_slide(velocidade, Vector2.UP)
 
 func pontuacao():
+	if GameData.pega_valor("sons") == 1:
+		$AudioMoeda.play()
 	pontos += 1
 	get_parent().find_node("HUD").altera_pontuacao(pontos)
 	
@@ -33,13 +37,3 @@ func game_over():
 	
 	if pontos > recorde:
 		GameData.altera_valor("recorde", pontos)
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		

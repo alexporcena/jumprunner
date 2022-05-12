@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/imagens/personagem.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Personagem.gd" type="Script" id=2]
+[ext_resource path="res://assets/sound/coin.ogg" type="AudioStream" id=3]
+[ext_resource path="res://assets/sound/jumppp11.ogg" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4, 7 )
@@ -88,3 +90,11 @@ anims/RESET = SubResource( 2 )
 anims/caindo = SubResource( 3 )
 anims/correndo = SubResource( 4 )
 anims/pulando = SubResource( 5 )
+
+[node name="AudioPulo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+
+[node name="AudioMoeda" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0
